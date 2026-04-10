@@ -1,39 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Will You Marry Me?</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        <marquee>
-    <h1 align="bottom"><b><i>Made By Pranay</i></b></h1>
-            </marquee>
-        </div>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+    <div class="header" id="Author">
+      <h1 align="bottom">
+        <b><i>Made By Pranay</i></b>
+      </h1>
+    </div>
     <!-- Background Music (Optional) -->
     <audio autoplay loop>
-        <source src="romantic.mp3" type="audio/mpeg">
+      <source src="romantic.mp3" type="audio/mpeg" />
     </audio>
 
     <div class="container">
-        <h1 class="typing"></h1>
-        <p class="message">You make my world brighter every day. I can't imagine my life without you.</p>
+      <h1 class="typing"></h1>
+      <p class="message">
+        You make my world brighter every day. I can't imagine my life without
+        you.
+      </p>
 
-        <div class="buttons">
-            <button id="yesBtn">Yes ❤️</button>
-            <button id="noBtn">No 💔</button>
-        </div>
+      <div class="buttons">
+        <button id="yesBtn">Yes ❤️</button>
+        <button id="noBtn">No 💔</button>
+      </div>
 
-        <div id="response" class="hidden">
-            <h2>Yay! You made me the happiest person alive! 💍❤️</h2>
-        </div>
+      <div id="response" class="hidden">
+        <h2>Yay! You made me the happiest person alive! 💍❤️</h2>
+      </div>
     </div>
 
     <!-- Floating Hearts -->
     <div class="hearts"></div>
+    </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
