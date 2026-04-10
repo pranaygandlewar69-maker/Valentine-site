@@ -19,9 +19,15 @@ document.getElementById("yesBtn").addEventListener("click", () => {
 
 // Moving "No" Button
 const noBtn = document.getElementById("noBtn");
+const app = document.getElementById("app");
+const container = document.querySelector(".container");
 noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * (window.innerWidth - noBtn.clientWidth);
-    const y = Math.random() * (window.innerHeight - noBtn.clientHeight);
+    const appRect = app.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    const maxX = Math.max(0, containerRect.width - noBtn.offsetWidth - 50);
+    const maxY = Math.max(0, containerRect.height - noBtn.offsetHeight - 50);
+    const x = (containerRect.left - appRect.left) + Math.random() * maxX;
+    const y = (containerRect.top - appRect.top) + Math.random() * maxY;
     noBtn.style.position = "absolute";
     noBtn.style.left = `${x}px`;
     noBtn.style.top = `${y}px`;
